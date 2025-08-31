@@ -1,0 +1,5 @@
+{
+  "name": "Tic Tac Toe",
+  "description": "A visually stunning Tic-Tac-Toe game where you can play against another player or a powerful AI opponent. Features a modern UI, smooth animations, and score tracking.",
+  "requestFramePermissions": []
+}

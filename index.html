@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe Arena</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --background-start: #4e54c8;
+        --background-end: #8f94fb;
+        --text-primary: #ffffff;
+        --text-secondary: #e0e0e0;
+        --card-bg: rgba(255, 255, 255, 0.1);
+        --card-border: rgba(255, 255, 255, 0.2);
+        --input-ring-cyan: #43cea2;
+        --input-ring-purple: #ff758c;
+        --accent-color: #fcb045;
+        --accent-color-hover: #fdbb5d;
+        --accent-shadow: rgba(252, 176, 69, 0.4);
+        --x-color-start: #43cea2;
+        --x-color-end: #185a9d;
+        --o-color-start: #ff758c;
+        --o-color-end: #ff7eb3;
+      }
+      
+      .theme-purple {
+        --background-start: #4e54c8;
+        --background-end: #8f94fb;
+        --text-primary: #ffffff;
+        --text-secondary: #e0e0e0;
+        --card-bg: rgba(255, 255, 255, 0.1);
+        --accent-color: #fcb045;
+        --accent-color-hover: #fdbb5d;
+        --accent-shadow: rgba(252, 176, 69, 0.4);
+      }
+      
+      .theme-neon {
+        --background-start: #0f0c29;
+        --background-end: #302b63;
+        --text-primary: #f0f0f0;
+        --text-secondary: #a0a0a0;
+        --card-bg: rgba(10, 10, 20, 0.5);
+        --card-border: rgba(0, 242, 255, 0.3);
+        --accent-color: #00f2ff;
+        --accent-color-hover: #5df8ff;
+        --accent-shadow: rgba(0, 242, 255, 0.4);
+      }
+      
+      .theme-sunset {
+        --background-start: #ff7e5f;
+        --background-end: #feb47b;
+        --text-primary: #ffffff;
+        --text-secondary: #fce1d6;
+        --card-bg: rgba(255, 255, 255, 0.15);
+        --card-border: rgba(255, 255, 255, 0.3);
+        --accent-color: #d9534f;
+        --accent-color-hover: #e06c68;
+        --accent-shadow: rgba(217, 83, 79, 0.4);
+      }
+      
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(-45deg, var(--background-start), var(--background-end));
+        color: var(--text-primary);
+        transition: background 0.5s ease-in-out;
+        overflow: hidden;
+      }
+
+      .floating-label-input:focus ~ label,
+      .floating-label-input:not(:placeholder-shown) ~ label {
+        transform: translateY(-1.5rem) scale(0.75);
+        color: var(--accent-color);
+        background-color: color-mix(in srgb, var(--background-start) 80%, var(--background-end) 20%);
+        padding: 0 0.25rem;
+      }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1"
+  }
+}
+</script>
+</head>
+  <body class="theme-purple">
+    <div id="particle-container"></div>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
